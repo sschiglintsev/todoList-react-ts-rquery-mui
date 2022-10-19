@@ -1,0 +1,15 @@
+.checkBoxGroup {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+}
+.checkBox {
+    height: 23px;
+    display: flex;
+    align-items: center;
+}
+.labelCheckbox {
+    height: 23px;
+    display: flex;
+    align-items: center;
+}
