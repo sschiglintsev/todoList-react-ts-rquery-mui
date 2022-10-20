@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import style from './index.module.css'
 import styled from "@mui/material/styles/styled";
 import SwitchUnstyled, {switchUnstyledClasses} from '@mui/base/SwitchUnstyled';
@@ -84,11 +84,25 @@ const Root = styled('span')(
   `,
 );
 
-export const Task = () => {
+type PropsType = {
+    id: number,
+    title: string,
+    description: string,
+    status: boolean,
+    color:string,
+}
+
+export const Task = (props:PropsType) => {
+    const [status, setStatus] = useState<boolean>(props.status);
+
+    const changeStatus =()=> {
+        setStatus(!status)
+    }
+
     return (
         <div className={style.taskContainer}>
             <div className={style.groupLT}>
-                <div className={style.line} style={{background: "#FF0000"}}/>
+                <div className={style.line} style={{background: `${props.color}`}}/>
                 <div className={style.containerTD}>
                     <Typography
                         style={{
@@ -98,23 +112,23 @@ export const Task = () => {
                             fontWeight: 400,
                         }}
                     >
-                        Visit David
+                        {props.title}
                     </Typography>
-                        <Typography
-                            style={{
-                                fontFamily: "Actor",
-                                color: "#FFFFFF",
-                                opacity: 0.6,
-                                fontSize: 10,
-                                fontWeight: 400,
-                            }}
-                        >
-                            Lorem Ipsum Dolor Sit met...
-                        </Typography>
+                    <Typography
+                        style={{
+                            fontFamily: "Actor",
+                            color: "#FFFFFF",
+                            opacity: 0.6,
+                            fontSize: 10,
+                            fontWeight: 400,
+                        }}
+                    >
+                        {props.description}
+                    </Typography>
                 </div>
             </div>
             <div className={style.checkbox}>
-                <SwitchUnstyled component={Root} defaultChecked/>
+                <SwitchUnstyled component={Root} checked={status} onChange={changeStatus}/>
             </div>
         </div>
     );
