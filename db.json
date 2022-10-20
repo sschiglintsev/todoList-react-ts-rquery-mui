@@ -1,28 +1,5 @@
 {
   "tasks": [
-    {
-      "id": 1,
-      "title": "Visit David",
-      "description": "Lorem Ipsum Dolor Sit met...",
-      "status": false,
-      "color": "#FF0000",
-      "date": "01-01-2022"
-    },
-    {
-      "id": 1,
-      "title": "Goceries For Dinner",
-      "description": "Lorem Ipsum Dolor Sit met...",
-      "status": false,
-      "color": "#366EFF",
-      "date": "01-01-2022"
-    },{
-      "id": 1,
-      "title": "Fix Dad’s iPad",
-      "description": "Lorem Ipsum Dolor Sit met...",
-      "status": true,
-      "color": "#FFEB33",
-      "date": "01-01-2022"
-    }
-  ]
 
+  ]
 }
