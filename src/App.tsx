@@ -3,7 +3,14 @@ import {QueryClient, QueryClientProvider} from "react-query";
 import {Main} from "./pages";
 import style from "./App.module.css";
 
-const queryClient = new QueryClient();
+export const queryClient = new QueryClient({
+        defaultOptions: {
+            queries: {
+                refetchOnWindowFocus: false
+            }
+        }
+    }
+);
 
 function App() {
     return (
