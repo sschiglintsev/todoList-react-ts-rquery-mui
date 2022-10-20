@@ -52,7 +52,8 @@ export const TodoList = (props: propsType) => {
                        height: 844,
                        display: 'flex',
                        flexDirection: 'column',
-                       justifyContent: 'space-between'
+                       justifyContent: 'space-between',
+                       overflow:'hidden',
                    }}>
                 <div>
                     <div className={style.headContainer}>
