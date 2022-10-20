@@ -30,12 +30,11 @@ export const AddTask = () => {
             }
         );
 
-
         useEffect(() => {
         }, [isPostingTutorial])
 
         const addTask = () => {
-            postTutorial();
+            if (titleTask.length && descriptionTask.length) {postTutorial();}
         };
 
         return (
