@@ -1,0 +1,44 @@
+.taskContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 40px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.groupLT {
+    display: flex;
+    flex-direction: row;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    width: 5px;
+    height: 40px;
+    border-radius: 2px;
+    margin-left: 17px;
+}
+
+.containerTD {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #F4F4F4;
+    height: 40px;
+    padding-left: 11px;
+}
+
+.title {
+
+}
+
+.description {
+    width: 235px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    padding-right: 25px;
+}
