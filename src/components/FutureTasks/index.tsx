@@ -29,7 +29,7 @@ export const FutureTasks = (props:PropsType) => {
                         <div className={style.containerTD}>
                             <Typography
                                 style={{
-                                    fontFamily: "Actor",
+                                    fontFamily: "Source Sans Pro",
                                     color: "#F4F4F4",
                                     fontSize: 20,
                                     fontWeight: 400,
