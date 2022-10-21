@@ -29,5 +29,8 @@ export const TasksService ={
             color: ('#'+(Math.random()*0xFFFFFF<<0).toString(16)),
             date: formatDate()
         })
-    }
+    },
+    async deleteTask(id:number) {
+        return axios.delete(`http://localhost:3004/tasks/${id}`)
+    },
 };
