@@ -1,5 +1,8 @@
-# TodoList (use react, ts, js, react query, MUI)
+# TodoList
+Use react, typescript, js, react query, axios, MUI, uuid, nice-react-ticker, json-server
 Design https://www.figma.com/file/C8X04jX085jFMQsEWTkoZD/To-Do-List-App-UI-(Community)-(Copy)?node-id=1%3A17
+
+
 
 ## Getting Started with Create React App
 
