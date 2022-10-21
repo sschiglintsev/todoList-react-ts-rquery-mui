@@ -3,6 +3,9 @@ import style from './index.module.css'
 import styled from "@mui/material/styles/styled";
 import SwitchUnstyled, {switchUnstyledClasses} from '@mui/base/SwitchUnstyled';
 import {Typography} from "@mui/material";
+import {useMutation} from "react-query";
+import {TasksService} from "../../services/tasks.service";
+import {queryClient} from "../../App";
 
 const blue = {
     500: '#10C200',
@@ -93,20 +96,33 @@ type PropsType = {
 }
 
 export const Task = (props:PropsType) => {
+
+    const {isLoading: isPostingTutorial, mutate: postTutorial} = useMutation(() => TasksService.deleteTask(props.id),
+        {
+            onSuccess: () => {
+                queryClient.invalidateQueries();
+            }
+        }
+    );
+
     const [status, setStatus] = useState<boolean>(props.status);
 
     const changeStatus =()=> {
         setStatus(!status)
-    }
+    };
+
+    const delTask = () => {
+        postTutorial();
+    };
 
     return (
         <div className={style.taskContainer}>
             <div className={style.groupLT}>
-                <div className={style.line} style={{background: `${props.color}`}}/>
+                <div className={style.line} style={{background: `${props.color}`}} onClick={delTask}/>
                 <div className={style.containerTD}>
                     <Typography
                         style={{
-                            fontFamily: "Actor",
+                            fontFamily: "Source Sans Pro",
                             color: "#F4F4F4",
                             fontSize: 20,
                             fontWeight: 400,
@@ -116,7 +132,7 @@ export const Task = (props:PropsType) => {
                     </Typography>
                     <Typography
                         style={{
-                            fontFamily: "Actor",
+                            fontFamily: "Source Sans Pro",
                             color: "#FFFFFF",
                             opacity: 0.6,
                             fontSize: 10,

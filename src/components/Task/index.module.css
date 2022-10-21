@@ -18,6 +18,7 @@
     height: 40px;
     border-radius: 2px;
     margin-left: 17px;
+    cursor: pointer;
 }
 
 .containerTD {
@@ -26,7 +27,10 @@
     justify-content: space-between;
     color: #F4F4F4;
     height: 40px;
+    width: 230px;
     padding-left: 11px;
+    overflow: hidden;
+
 }
 
 .title {
