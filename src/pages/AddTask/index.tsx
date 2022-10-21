@@ -72,9 +72,7 @@ export const AddTask = () => {
                                 <CircularProgress color="inherit"/>
                             </Stack>
                             : <Button variant="outlined" onClick={addTask}>Create Task</Button>}
-
                     </div>
-
                 </Paper>
             </div>
         );

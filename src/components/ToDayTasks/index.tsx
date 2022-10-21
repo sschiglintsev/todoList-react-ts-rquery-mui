@@ -13,9 +13,11 @@ export const ToDayTasks = () => {
     const {isLoading, data: response, error, isFetching} = useQuery('tasks list',
         () => TasksService.getAll(),
         );
+
     const listTasks = response?.data.map(el => <Task key={el.title} id={el.id} title={el.title}
                                                      description={el.description} status={el.status}
                                                      color={el.color}/>);
+
     const [status, setStatus] = useState<boolean>(true);
 
     const changeStatus = (event: React.ChangeEvent<HTMLInputElement>) => {

@@ -25,7 +25,6 @@ const styl = {
     boxShadow: 24,
     borderRadius: 10,
     p: 4,
-
 };
 
 export const TodoList = (props: propsType) => {

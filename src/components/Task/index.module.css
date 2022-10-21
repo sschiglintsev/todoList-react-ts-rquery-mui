@@ -6,6 +6,7 @@
     padding-top: 16px;
     padding-bottom: 16px;
 }
+
 .groupLT {
     display: flex;
     flex-direction: row;
@@ -34,7 +35,6 @@
 }
 
 .title {
-
 }
 
 .description {

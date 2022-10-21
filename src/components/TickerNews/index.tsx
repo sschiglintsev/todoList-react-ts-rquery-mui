@@ -10,7 +10,6 @@ type propsType ={
     status:boolean,
 }
 
-
 export const TickerNews = (props:propsType) => {
     const {isLoading, data: response, error} = useQuery('news list', () => NewsService.getAll());
 
