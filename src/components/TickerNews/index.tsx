@@ -11,7 +11,13 @@ type propsType ={
 }
 
 export const TickerNews = (props:propsType) => {
-    const {isLoading, data: response, error} = useQuery('news list', () => NewsService.getAll());
+    const {isLoading, data: response, error} = useQuery('news list', () => NewsService.getAll(),
+        {
+            onError:(error:any)=>{
+                alert(error.message)
+            }});
+
+
 
     let listNews = response?.data.articles.map((el) => el.title);
     if (!listNews) {listNews=[]}
@@ -20,7 +26,6 @@ export const TickerNews = (props:propsType) => {
         <div className={style.tecker}>
             {props.status?
                 <>
-                    {error && <div style={{color: 'red'}}>{error as any}.message</div>}
                     {isLoading ?
                         <Stack sx={{color: 'grey.500', width: '100%', display: 'flex', justifyContent: 'center'}}
                                spacing={2}
