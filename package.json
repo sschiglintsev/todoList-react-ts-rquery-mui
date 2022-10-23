@@ -2,6 +2,7 @@
   "name": "todolist-ts",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sschiglintsev.github.io/todoList-react-ts-rquery-mui",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
@@ -31,7 +32,9 @@
     "server": "json-server --watch db.json --port 3004",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +55,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "json-server": "^0.17.0"
   }
 }
