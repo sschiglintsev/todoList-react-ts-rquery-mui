@@ -3,13 +3,28 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
+
+@media screen and (max-width: 800px) {
+    .main {
+        height: 100%;
+
+    }
+}
+
 
 .placeTasks {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+@media screen and (max-width: 800px) {
+    .placeTasks {
+        flex-direction: column;
+        align-items: center;
+    }
 }
